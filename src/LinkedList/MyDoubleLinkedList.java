@@ -1,6 +1,8 @@
 package LinkedList;
 
-public class MyDoubleLinkedList {
+import java.util.Objects;
+
+public class MyDoubleLinkedList<T> {
     private DLLNode head;
     private DLLNode tail;
     private int size;
@@ -11,7 +13,7 @@ public class MyDoubleLinkedList {
         size = 0;
     }
 
-    public void add(int data) {
+    public void add(T data) {
         DLLNode node = new DLLNode(data);
 
         if (head == null) { // head에 값이 없다면 즉, 처음 들어오는 데이터라면 head에 값을 넣어주어야 한다.
@@ -57,9 +59,9 @@ public class MyDoubleLinkedList {
      * @param index : 꺼내고 싶은 데이터가 있는 노드의 인덱스
      * @return 해당 노드의 데이터 값
      */
-    public int get(int index) {
+    public T get(int index) {
         DLLNode node = findNode(index);
-        return node.data;
+        return (T) node.data;
     }
 
     /**
@@ -87,10 +89,10 @@ public class MyDoubleLinkedList {
      * @param data
      * @return
      */
-    public boolean containData(int data) {
+    public boolean containData(T data) {
         DLLNode node = head;
         for (int i = 0; i < size; ++i) {
-            if (node.data == data)
+            if (Objects.equals(node.data, data))
                 return true;
             node = node.nextNode;
         }
