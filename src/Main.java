@@ -9,6 +9,9 @@ public class Main {
         list.add(30);
         System.out.println(list.isEmpty());
 
+        System.out.println("20 is contain? " + list.containData(20));
+        System.out.println("50 is contain? " + list.containData(50));
+
         int data = list.get(1);
         System.out.println(data);
 

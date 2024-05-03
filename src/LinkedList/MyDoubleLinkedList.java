@@ -82,6 +82,21 @@ public class MyDoubleLinkedList {
         return node;
     }
 
+    /**
+     * data의 값을 가진 노드가 있는지 확인하는 메서드
+     * @param data
+     * @return
+     */
+    public boolean containData(int data) {
+        DLLNode node = head;
+        for (int i = 0; i < size; ++i) {
+            if (node.data == data)
+                return true;
+            node = node.nextNode;
+        }
+        return false;
+    }
+
     public int getSize() {
         return size;
     }
