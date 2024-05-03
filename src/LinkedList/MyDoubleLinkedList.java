@@ -63,6 +63,14 @@ public class MyDoubleLinkedList {
     }
 
     /**
+     * 해당 리스트가 비었는지 알려주는 메서드
+     * @return 비었는지 여부
+     */
+    public boolean isEmpty() {
+        return head == null ? true : false;
+    }
+
+    /**
      * 입력 받은 index에 해당하는 노드를 찾아주는 함수
      * @param index : 몇 번째 index 노드를 찾을 것인지
      * @return 해당 index의 노드
