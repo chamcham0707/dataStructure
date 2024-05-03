@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class DLLNode {
     int data;
     DLLNode prevNode;
