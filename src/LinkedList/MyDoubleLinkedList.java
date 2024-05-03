@@ -27,10 +27,7 @@ public class MyDoubleLinkedList {
     }
 
     public void remove(int index) {
-        DLLNode node = head;
-        for (int i = 0; i < index; ++i) { // 해당 인덱스까지 순차 조회를 하며 삭제할 노드를 찾는다.
-            node = node.nextNode;
-        }
+        DLLNode node = findNode(index);
 
         if (node == head) { // 삭제할 노드가 head라면 head의 다음 노드를 head로 변경하고 이전 노드는 null로 바꿔줘야 한다.
             head = node.nextNode;
@@ -46,10 +43,35 @@ public class MyDoubleLinkedList {
         --size; // 노드 하나를 삭제했으므로 size를 줄여주어야 한다.
     }
 
+    /**
+     * 저장된 모든 노드를 지우는 메서드
+     */
+    public void clear() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+
+    /**
+     * 입력 받은 index에 해당하는 노드를 찾아주는 함수
+     * @param index : 몇 번째 index 노드를 찾을 것인지
+     * @return 해당 index의 노드
+     */
+    public DLLNode findNode(int index) {
+        DLLNode node = head;
+        for (int i = 0; i < index; ++i)
+            node = node.nextNode;
+        return node;
+    }
+
     public int getSize() {
         return size;
     }
 
+    /**
+     * 해당 리스트의 노드를 모두 출력해주는 메서드
+     */
     public void printAll() {
         DLLNode node = head;
         System.out.print("[ ");

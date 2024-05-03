@@ -10,5 +10,7 @@ public class Main {
         list.remove(1);
 
         list.printAll();
+        list.clear();
+        list.printAll();
     }
 }
