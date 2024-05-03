@@ -52,6 +52,15 @@ public class MyDoubleLinkedList {
         size = 0;
     }
 
+    /**
+     * index 노드의 데이터를 반환해주는 메서드
+     * @param index : 꺼내고 싶은 데이터가 있는 노드의 인덱스
+     * @return 해당 노드의 데이터 값
+     */
+    public int get(int index) {
+        DLLNode node = findNode(index);
+        return node.data;
+    }
 
     /**
      * 입력 받은 index에 해당하는 노드를 찾아주는 함수

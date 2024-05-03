@@ -7,6 +7,9 @@ public class Main {
         list.add(20);
         list.add(30);
 
+        int data = list.get(1);
+        System.out.println(data);
+
         list.remove(1);
 
         list.printAll();
