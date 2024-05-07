@@ -1,25 +1,28 @@
 import LinkedList.MyDoubleLinkedList;
+import queue.MyQueue;
 
 public class Main {
     public static void main(String[] args) {
-        // MyDoubleLinkedList<Integer> list = new MyDoubleLinkedList<Integer>();
-        MyDoubleLinkedList<String> list = new MyDoubleLinkedList<String>();
-        System.out.println(list.isEmpty());
-        list.add("apple");
-        list.add("banana");
-        list.add("car");
-        System.out.println(list.isEmpty());
+        MyQueue<Integer> queue = new MyQueue<>();
 
-        System.out.println("apple is contain? " + list.containData("apple"));
-        System.out.println("dance is contain? " + list.containData("dance"));
+        System.out.println(queue.isEmpty());
 
-        System.out.println(list.get(1));
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
 
-        list.remove(1);
+        queue.dequeue();
 
-        list.printAll();
-        list.clear();
-        System.out.println(list.isEmpty());
-        list.printAll();
+        queue.enqueue(4);
+        queue.enqueue(5);
+        queue.enqueue(6);
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        System.out.println(queue.isEmpty());
+
+        queue.printAll();
     }
 }
