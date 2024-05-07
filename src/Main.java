@@ -23,6 +23,8 @@ public class Main {
 
         System.out.println(queue.isEmpty());
 
+        System.out.println(queue.peek());
+
         queue.printAll();
     }
 }
