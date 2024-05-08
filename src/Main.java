@@ -1,30 +1,22 @@
 import LinkedList.MyDoubleLinkedList;
 import queue.MyQueue;
+import stack.MyStack;
 
 public class Main {
     public static void main(String[] args) {
-        MyQueue<Integer> queue = new MyQueue<>();
+        MyStack<Integer> stack = new MyStack<>();
 
-        System.out.println(queue.isEmpty());
+        System.out.println("isEmpty? " + stack.isEmpty());
 
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
 
-        queue.dequeue();
+        stack.printAll();
 
-        queue.enqueue(4);
-        queue.enqueue(5);
-        queue.enqueue(6);
+        stack.pop();
+        stack.printAll();
 
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-
-        System.out.println(queue.isEmpty());
-
-        System.out.println(queue.peek());
-
-        queue.printAll();
+        System.out.println("isEmpty? " + stack.isEmpty());
     }
 }
